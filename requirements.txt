@@ -1,0 +1,9 @@
+sentence-transformers
+
+Flask
+flask-cors
+
+langchain
+lagnchain_community
+langchain-huggingface`
+chromadb
