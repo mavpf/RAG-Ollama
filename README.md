@@ -25,15 +25,15 @@ LangChain is an open-source framework designed to help developers build applicat
 
 LangChain's primary features include:
 
-Chains: LangChain provides a way to create sequences of calls (chains) where each step can involve different operations or model invocations. This is useful for building complex applications where different tasks need to be performed in a specific order.
+1. Chains: LangChain provides a way to create sequences of calls (chains) where each step can involve different operations or model invocations. This is useful for building complex applications where different tasks need to be performed in a specific order.
 
-Agents: LangChain includes support for creating agents that can autonomously make decisions based on model outputs and perform actions, such as querying databases or interacting with external systems.
+2. Agents: LangChain includes support for creating agents that can autonomously make decisions based on model outputs and perform actions, such as querying databases or interacting with external systems.
 
-Memory: The framework offers memory management tools that allow applications to maintain context between interactions with the language model, making it easier to build conversational agents that can hold long-term context or remember previous interactions.
+3. Memory: The framework offers memory management tools that allow applications to maintain context between interactions with the language model, making it easier to build conversational agents that can hold long-term context or remember previous interactions.
 
-Data Augmentation: LangChain helps in augmenting the input to language models with additional context or structured data, improving the relevance and accuracy of model outputs.
+4. Data Augmentation: LangChain helps in augmenting the input to language models with additional context or structured data, improving the relevance and accuracy of model outputs.
 
-Integration: It integrates well with various LLM providers and other machine learning frameworks, making it easier to switch between models or combine different technologies.
+5. Integration: It integrates well with various LLM providers and other machine learning frameworks, making it easier to switch between models or combine different technologies.
 
 LangChain is particularly useful for developers who want to build sophisticated applications that leverage LLMs for tasks such as natural language processing, chatbots, automated agents, and more.
 
@@ -151,6 +151,8 @@ To create a local image, named ollama, first of all have the docker client insta
 >> docker exec -it ollama bash
 ```
 
+**WARNING: local `data` directory is where Ollama will keep all `llama2` information. If the files from this directory are erased, `llama2` will need a new installation.**
+
 Then, inside the container, start the ollama, using llama2:
 
 ```bash
@@ -169,8 +171,6 @@ Facebook is a social media platform that allows users to connect with friends...
 
 $ exit
 ```
-
-**WARNING: `data`directory is where Ollama will keep all `llama2` information. If the files from this directory are erased, `llama2` will need a new installation.**
 
 Ollama also exposes REST API (`api/generate`) to the llm which runs on port `11434`, so we can ask question via the REST API (e.g using `curl`)
 ask question and get answer as streams
@@ -222,7 +222,7 @@ With all requirements done, it's time to start the app:
 
 ### Post a question
 
-Once the RAG application is running, I can submit questions related to the website scraped.
+Once the RAG application is running, I can submit questions related to the website scraped, trough an API.
 
 ```bash
 curl -i -XPOST "http://localhost:7654/api/question" \
