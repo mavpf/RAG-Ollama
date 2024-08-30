@@ -16,4 +16,3 @@ RUN apt-get install -y nvidia-container-toolkit
 #Expose port 11434
 
 EXPOSE 11434
-
