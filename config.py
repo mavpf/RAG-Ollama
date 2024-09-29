@@ -10,6 +10,9 @@ INDEX_PERSIST_DIRECTORY = os.getenv('INDEX_PERSIST_DIRECTORY', "./data/chromadb"
 TARGET_URL =  os.getenv('TARGET_URL', "https://python.langchain.com/v0.2/docs/concepts/")
 DEPTH = 2
 
+# target directory for file update
+TARGET_DIRECTORY = os.getenv('TARGET_DIRECTORY', "./files")
+
 # http api port
 HTTP_PORT = os.getenv('HTTP_PORT', 7654)
 

@@ -4,10 +4,22 @@ This RAG (Retrieval-Augmented Generation) app is designed to scrap information f
 
 The app is based on this [article](https://medium.com/rahasak/build-rag-application-using-a-llm-running-on-local-computer-with-ollama-and-langchain-e6513853fda0) from Medium, but I made some changes.
 
-### To be added soon
+You will need installed:
+- Docker for desktop;
+- CMAKE;
+- Anaconda.
+
+### To be added 
 
 - Add search history database, for context;
 - Add file scrap.
+
+## Index
+
+1. [Components](#1-components)
+2. [Application Steps](#2-application-steps)
+3. [The Configuration File](#3-the-configuration-file)
+4. [Run Application](#4-run-application)
 
 ## 1. Components
 
@@ -238,3 +250,4 @@ curl -i -XPOST "http://localhost:7654/api/question" \
 {
   "answer": "A retriever in the context of LangChain is a component that retrieves documents or data from an external source, such as a database or web API, based on a query or prompt. The retrieved documents are then passed to a model, such as a language model (LLM), for processing and generation of output.\n\nThe retriever acts as a bridge between the external data source and the LLM, allowing the LLM to leverage external knowledge and information to enhance its performance and generate more accurate and relevant output. The retriever can be thought of as a \"fetcher\" or \"retrieval agent,\" tasked with identifying and retrieving relevant documents or data based on the query or prompt provided by the user.\n\nSome common types of retrievers used in LangChain include:\n\n1. Web retriever: retrieves documents from the web using a URL or search query.\n2. Database retriever: retrieves data from a database using a SQL query or key-value pair.\n3. File retriever: retrieves files from a file system or storage location.\n4. API retriever: retrieves data from an application programming interface (API) using a set of endpoints or queries.\n\nThe retriever component is an important part of the LangChain architecture, as it allows the LLM to access and process a wide range of data sources, enhancing its ability to generate high-quality output."
 }
+```

@@ -7,3 +7,5 @@ langchain
 lagnchain_community
 langchain-huggingface`
 chromadb
+unstructured
+python-magic-bin
